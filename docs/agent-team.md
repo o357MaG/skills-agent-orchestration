@@ -1,10 +1,10 @@
 # Agent team
 
-For Mona's Project Pulse dashboard, I will use a four-agent custom team orchestrated through GitHub Copilot CLI in a Codespace.
+Mona's Project Pulse dashboard will be built with a four-agent custom team orchestrated from GitHub Copilot CLI in a Codespace.
 
-- Orchestrator — Model: Claude Opus 4.7 (copilot). Responsible for breaking the work into phases, delegating to specialist agents, coordinating dependencies, and verifying that all pieces fit together before reporting progress. Definition: `.github/agents/orchestrator.agent.md`.
-- Planner — Model: Claude Opus 4.7 (copilot). Responsible for researching the repository, checking relevant docs and dependencies, identifying edge cases, and producing an ordered implementation plan with file assignments and validation expectations. Definition: `.github/agents/planner.agent.md`.
-- Designer — Model: Gemini 3.1 Pro (copilot). Responsible for user experience, accessibility, information hierarchy, responsive layout, and the visual polish of the Project Pulse dashboard. Definition: `.github/agents/designer.agent.md`.
-- Coder — Model: GPT-5.5 (copilot). Responsible for implementing code changes, fixing bugs, and writing the project logic within the scope delegated by the Orchestrator, including any assigned runnable app support. Definition: `.github/agents/coder.agent.md`.
+- Orchestrator — Model: Claude Opus 4.7 (copilot). Responsible for decomposing the task into phases, assigning work to specialist agents, coordinating dependencies, and verifying the final result before reporting back. Source: `.github/agents/orchestrator.agent.md`.
+- Planner — Model: Claude Opus 4.7 (copilot). Responsible for researching the repo, reviewing the requirements, identifying dependencies and edge cases, and producing a concrete implementation plan with file ownership and validation steps. Source: `.github/agents/planner.agent.md`.
+- Designer — Model: Gemini 3.1 Pro (copilot). Responsible for the Project Pulse user experience: accessibility, hierarchy, layout, interactive clarity, and visual polish for the dashboard. Source: `.github/agents/designer.agent.md`.
+- Coder — Model: GPT-5.5 (copilot). Responsible for the implementation work within the Orchestrator's assigned scope, including the static dashboard files and any supporting runnable app configuration. Source: `.github/agents/coder.agent.md`.
 
-All four custom agent definitions live under the repository's `.github/agents/` folder and are managed through GitHub Copilot CLI in the Codespace to coordinate the dashboard build.
+The custom agents live under the repository's `.github/agents/` folder, and the team works together through GitHub Copilot CLI to build the Project Pulse dashboard.
